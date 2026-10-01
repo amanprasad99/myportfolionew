@@ -77,9 +77,9 @@ img { max-width: 100%; }
 .hero-content { position: relative; z-index: 1; max-width: 580px; }
 .hero-greeting { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 10px; }
 .hero-name { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 16px; }
-.hero-role { font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 600; margin-bottom: 20px; min-height: 2.2rem; }
-.role-text { background: linear-gradient(135deg, var(--primary-light), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.cursor { animation: blink 1s step-end infinite; color: var(--primary-light); -webkit-text-fill-color: var(--primary-light); }
+.hero-role { font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 600; margin-bottom: 20px; min-height: 2.2rem; display: flex; align-items: center; }
+.role-text { display: inline-block; color: var(--primary-light); background: linear-gradient(135deg, var(--primary-light), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.cursor { display: inline-block; animation: blink 1s step-end infinite; color: var(--primary-light); -webkit-text-fill-color: var(--primary-light); margin-left: 2px; }
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 .hero-desc { color: var(--text-muted); font-size: 1rem; line-height: 1.8; margin-bottom: 36px; }
 .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }

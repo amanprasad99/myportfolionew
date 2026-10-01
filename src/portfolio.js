@@ -53,29 +53,42 @@ function highlightNav() {
 
 /* ===== TYPEWRITER EFFECT ===== */
 const roles = ['Aspiring Software Engineer', 'Full-Stack Developer', 'Computer Science Student'];
-let roleIndex = 0, charIndex = 0, isDeleting = false;
+let roleIndex = 0;
 const roleText = document.getElementById('role-text');
+let charIndex = roles[0].length;
+let isDeleting = true;
 
 function typeWriter() {
+  if (!roleText) return;
   const current = roles[roleIndex];
+  
   if (isDeleting) {
-    roleText.textContent = current.substring(0, charIndex--);
+    roleText.textContent = current.substring(0, charIndex);
+    charIndex--;
   } else {
-    roleText.textContent = current.substring(0, charIndex++);
+    roleText.textContent = current.substring(0, charIndex);
+    charIndex++;
   }
-  let speed = isDeleting ? 60 : 110;
-  if (!isDeleting && charIndex === current.length + 1) {
-    speed = 1800;
+
+  let speed = isDeleting ? 50 : 100;
+
+  if (!isDeleting && charIndex > current.length) {
+    speed = 2000;
     isDeleting = true;
-  } else if (isDeleting && charIndex === -1) {
+  } else if (isDeleting && charIndex < 0) {
     isDeleting = false;
     charIndex = 0;
     roleIndex = (roleIndex + 1) % roles.length;
     speed = 300;
   }
+
   setTimeout(typeWriter, speed);
 }
-typeWriter();
+
+if (roleText) {
+  roleText.textContent = roles[0];
+  setTimeout(typeWriter, 2000);
+}
 
 /* ===== SKILL BAR ANIMATION ===== */
 let skillsAnimated = false;
