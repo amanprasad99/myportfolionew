@@ -137,7 +137,7 @@ def create_resume(filename):
     story.append(Spacer(1, 4))
     
     # Project 2
-    story.append(Paragraph("<b>TempChat — Real-Time 1-to-1 Chat Application</b>", ParagraphStyle('SubHeading', parent=body_style, fontName='Helvetica-Bold', fontSize=10, leading=13)))
+    story.append(Paragraph("<b>TempChat — Real-Time 1-to-1 Chat Application</b> &nbsp;|&nbsp; <font color='#0055bb'><a href='https://tempchat-yds6.onrender.com'><u>Live Demo</u></a></font>", ParagraphStyle('SubHeading', parent=body_style, fontName='Helvetica-Bold', fontSize=10, leading=13)))
     story.append(Paragraph("• Designed a private chat application with authentication, real-time messaging, and image/video sharing.", bullet_style))
     story.append(Paragraph("• Implemented a WhatsApp-style interface with online/offline status, typing indicator, and delivered/seen message states.", bullet_style))
     story.append(Paragraph("• <b>Tech Stack:</b> Next.js, React.js, Node.js, Supabase, JavaScript", bullet_style))
