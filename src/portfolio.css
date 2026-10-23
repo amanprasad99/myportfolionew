@@ -707,6 +707,14 @@ img { max-width: 100%; }
   color: #6ee7b7 !important;
   border: 1px solid rgba(16, 185, 129, 0.3) !important;
 }
+.btn-tempchat {
+  background: linear-gradient(135deg, #10b981, #14b8a6) !important;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+}
+.btn-tempchat:hover {
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6) !important;
+  transform: translateY(-2px);
+}
 
 .project-portfolio-card {
   border: 1px solid rgba(124, 58, 237, 0.35);
